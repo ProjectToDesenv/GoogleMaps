@@ -12,6 +12,9 @@
       defer
     ></script>
     <style type="text/css">
+    /*https://paulosantanna.com/2012/10/14/habilitando-a-execucao-de-scripts-powershell/
+    Para Liberar acesso ao http-server
+    */
     /*Referencia --> https://developers.google.com/maps/documentation/javascript/examples/directions-panel?hl=en#all*/
       /* Always set the map height explicitly to define the size of the div
        * element that contains the map. */
@@ -112,8 +115,8 @@
     const directionsService = new google.maps.DirectionsService();
   // Create the map.
   const map = new google.maps.Map(document.getElementById('map'), {
-    zoom: 7,
-    center: {lat: 52.632469, lng: -1.689423},
+    zoom: 10,
+    center: {lat:-20.4866919, lng:-54.6643489},
     styles: [
             { elementType: "geometry", stylers: [{ color: "#242f3e" }] },
             {
@@ -204,7 +207,7 @@
 
   var marker = new google.maps.Marker({
   map: map,
-  position: new google.maps.LatLng(52.632469,-1.689423),
+  position: new google.maps.LatLng(-20.4866919,-54.6643489),
   title: 'Some location'
 });
 
